@@ -14,4 +14,6 @@ public interface RoleDao {
      * @return
      */
     public List<Role> findAll();
+
+    void save(Role role);
 }
