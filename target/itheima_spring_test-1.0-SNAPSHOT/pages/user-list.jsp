@@ -144,21 +144,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <c:forEach items="${userList}" var="user">
-                                    <tr>
-                                        <td><input name="ids" type="checkbox"></td>
-                                        <td>${user.id}</td>
-                                        <td>${user.username}</td>
-                                        <td>${user.email}</td>
-                                        <td>${user.phoneNum}</td>
-                                        <td class="text-center">
-                                            课程研究员&nbsp;讲师&nbsp;
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                            <c:forEach items="${userList}" var="user">
+                                <tr>
+                                    <td><input name="ids" type="checkbox"></td>
+                                    <td>${user.id}</td>
+                                    <td>${user.username}</td>
+                                    <td>${user.email}</td>
+                                    <td>${user.phoneNum}</td>
+                                    <td class="text-center">
+                                        <c:forEach items="${user.roles}" var="role">&nbsp;&nbsp;${role.roleName}</c:forEach>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
 
                         </table>

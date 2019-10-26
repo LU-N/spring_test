@@ -37,6 +37,7 @@
     <!--配置UserService-->
     <bean id="userService" class="com.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
+        <property name="roleDao" ref="roleDao"/>
     </bean>
 
     <!--配置UserDao-->
