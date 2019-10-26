@@ -34,7 +34,13 @@
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 
+    <!--配置UserService-->
+    <bean id="userService" class="com.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
 
-
-
+    <!--配置UserDao-->
+    <bean id="userDao" class="com.dao.impl.UserDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
 </beans>
