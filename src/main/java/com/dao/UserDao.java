@@ -16,4 +16,29 @@ public interface UserDao {
      * @return
      */
     List<User> findAll();
+
+    /**
+     * save
+     * @param user
+     */
+    Long save(User user);
+
+    /**
+     * saveUserRoleRel
+     * @param id
+     * @param roleIds
+     */
+    void saveUserRoleRel(Long id, Long[] roleIds);
+
+    /**
+     * delUserRoleRel
+     * @param userId
+     */
+    void delUserRoleRel(Long userId);
+
+    /**
+     * del
+     * @param userId
+     */
+    void del(Long userId);
 }

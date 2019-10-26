@@ -59,6 +59,8 @@
 	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
+
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -142,17 +144,18 @@
 									</tr>
 								</thead>
 								<tbody>
-                                    <c:forEach items="${roleList}" var="role">
+									<c:forEach items="${roleList}" var="role">
 										<tr>
 											<td><input name="ids" type="checkbox"></td>
 											<td>${role.id}</td>
 											<td>${role.roleName}</td>
 											<td>${role.roleDesc}</td>
 											<td class="text-center">
-												<a href="#" class="btn bg-olive btn-xs">删除</a>
+												<a href="javascript:void(0);" class="btn bg-olive btn-xs">删除</a>
 											</td>
 										</tr>
-                                    </c:forEach>
+									</c:forEach>
+
 								</tbody>
 
 							</table>

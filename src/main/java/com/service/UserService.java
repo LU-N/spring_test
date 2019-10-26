@@ -10,8 +10,17 @@ import java.util.List;
  */
 public interface UserService {
     /**
-     *
+     * list
      * @return
      */
     List<User> list();
+
+    /**
+     * save
+     * @param user
+     * @param roleIds
+     */
+    void save(User user, Long[] roleIds);
+
+    void del(Long userId);
 }
