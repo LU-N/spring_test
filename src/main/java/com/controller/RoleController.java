@@ -31,7 +31,7 @@ public class RoleController {
         ModelAndView modelAndView = new ModelAndView();
         List<Role> roleList = roleService.list();
         //设置模型
-        modelAndView.addObject("roleList",roleList);
+        modelAndView.addObject("roleList", roleList);
         //设置视图
         modelAndView.setViewName("role-list");
         return modelAndView;
