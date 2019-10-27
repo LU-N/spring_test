@@ -41,4 +41,13 @@ public interface UserDao {
      * @param userId
      */
     void del(Long userId);
+
+    /**
+     * findByUsernameAndPassword
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    User findByUsernameAndPassword(String username, String password);
 }
